@@ -44,6 +44,10 @@ app.delete(
 //Loginuser
 app.post("/login", userController.LoginUser);
 
+app.get("/", (req,res)=>{
+  res.send("Hello User")
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
